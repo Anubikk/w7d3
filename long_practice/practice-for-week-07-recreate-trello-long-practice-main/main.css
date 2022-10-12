@@ -1,15 +1,44 @@
 /* Your code here */
 .header-nav__container{
-  display:flex;
+  display: flex;
   background-color: #026AA7;
   font-size: 16px;
   line-height: 20px;
   padding: 4px;
   text-decoration-color: white;
+  /* grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "header-nav_link trello-logo header_icons";
+  align-items: center;
+  width: fit-content; */
+  flex-direction: row;
+  margin: auto;
+  justify-content: space-between;
 }
+
+#alerts {
+  background-color: #CF513D;
+}
+
+.body {
+  font-family: 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  margin: 0px;
+}
+
+@media screen and (max-width: 730px) {
+  /* Hide the header search input field. */
+  .header-nav__button#search, .boards-label {
+    display: none;
+  }
+  /* Hide the "Boards" text, but leave the boards icon. */
+}
+
 /* Supplied CSS follows. */
 .header-nav__group{
   display: flex;
+  /* grid-area: header-nav_link; */
+  justify-content: right;
+  align-items: flex-end;
 }
 
 .header-nav__button {
@@ -20,7 +49,7 @@
   text-decoration: none;
   align-items: center;
   text-align: center;
-  background-color: hsla(0,0%,100%,.3);
+  background-color: #ffffff4d;
   box-shadow: none;
   color: #fff;
   line-height: 32px;
@@ -48,13 +77,229 @@
 
 .header-nav__trello-logo {
   opacity: 0.5;
-  display: block;
+  display: flex;
   left: 50%;
   position: absolute;
   transform: translateX(-50%);
-  top: 5px;
+  top: 15px;
+  grid-area: trello-logo;
+
 }
 
  .header-nav__button > i{
   width: 24px;
+}
+
+.team__container {
+  background-color: #f4f5f7;
+  padding: 32px;
+  display: flex;
+  flex-direction: row;
+
+}
+
+.team__info {
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 605px;
+  text-align: center;
+  padding-right: 25%;
+
+}
+
+.team__info > h1 {
+  margin: 0 0 12px;
+  font-size: 24px;
+  font-weight: 600px;
+  line-height: 28px;
+}
+
+.team__info a {
+  text-decoration-color: #172b4d;
+  line-height: 20px;
+  font-weight: normal;
+}
+
+.tabbed-nav__container {
+  background-color: #f4f5f7;
+}
+
+.tabbed-nav__group {
+  border-bottom: 1px solid #dfe1e6;
+  display: flex;
+  justify-content: center;
+}
+
+.tabbed-nav__link {
+  background-color: white;
+  border: 1px solid #dfe1e6;
+  border-bottom: 0px;
+  border-radius: 2px;
+  font-weight: bold;
+  line-height: 20px;
+  padding: 10px;
+  margin: 0px 5px;
+  text-decoration: #172b4d;
+}
+
+@media screen and (max-width: 500px) {
+  .tabbed-nav__link, .tabbed-nav__group{
+    display: block;
+    text-align: center;
+  }
+}
+
+.boards__container {
+  margin: 0 auto;
+  padding: 32px;
+  max-width: 1400px;
+  display: flex;
+}
+
+.boards__group {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  width: 80%;
+  flex-wrap: wrap;
+}
+
+.boards__sidebar {
+  background-color: #6c547b;
+  border-radius: 3px;
+  margin: 0px 32px 32px 0px;
+  padding: 0px 20px 32px 20px;
+  max-height: 130px;
+  max-width: 180px;
+  width: 20%;
+}
+
+.boards__board {
+  background-color: hotpink;
+  border-radius: 3px;
+  box-sizing: border-box;
+  font-weight: bold;
+  height: 100px;
+  margin: 0px 8px 16px;
+  max-width: 250px;
+  padding: 4px 8px;
+  position: relative;
+  color: white;
+  width: 25%;
+}
+
+.boards__sidebar-content p > a, .title {
+  color: white;
+}
+
+.boards__sidebar-content > .description {
+  color: lightblue;
+}
+
+@media screen and (min-width: 750px) and (max-width: 1280px) {
+  .boards__board{
+    width: 33%;
+  }
+
+}
+
+@media screen and (max-width: 750px){
+  .boards__board{
+    width: 100%;
+    max-width: none;
+  }
+}
+
+
+
+
+.board-1{
+  background-image: url(./board-backgrounds/board-1-background.jpg);
+  max-width: 100%;
+  max-height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.board-2{
+  background-image: url(./board-backgrounds/board-2-background.jpg);
+  max-width: 100%;
+  max-height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.board-3{
+  background-image: url(./board-backgrounds/board-3-background.jpg);
+  max-width: 100%;
+  max-height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.board-4{
+  background-image: url(./board-backgrounds/board-4-background.jpg);
+  max-width: 100%;
+  max-height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.board-5{
+  background-image: url(./board-backgrounds/board-5-background.jpg);
+  max-width: 100%;
+  max-height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.board-6{
+  background-image: url(./board-backgrounds/board-6-background.jpg);
+  max-width: 100%;
+  max-height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.board-7{
+  background-image: url(./board-backgrounds/board-7-background.jpg);
+  max-width: 100%;
+  max-height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.board-8{
+  background-image: url(./board-backgrounds/board-8-background.jpg);
+  max-width: 100%;
+  max-height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.board-9{
+  background-image: url(./board-backgrounds/board-9-background.jpg);
+  max-width: 100%;
+  max-height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.board-10{
+  background-image: url(./board-backgrounds/board-10-background.jpg);
+  max-width: 100%;
+  max-height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
